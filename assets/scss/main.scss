@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500);
+
+$primary-color-dark:   #1976D2;
+$primary-color:        #2196F3;
+$primary-color-light:  #BBDEFB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #607D8B;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
+*{
+	box-sizing:border-box;
+}
+body{
+	font-family: 'Fira Sans', sans-serif;
+	font-weight:300;
+	height:100%;
+	min-height: 100%; 
+}
+#wrapper{
+	padding-top: 50px;
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+section{
+	width:100%;
+	height:100vh;
+	float:left;
+	background-color: $primary-color;
+	text-align:center;
+	color: rgba(#fff, 0.5);
+	font-size:3em;
+	&:nth-child(2){
+		background:$divider-color;
+	}
+	&:nth-child(3){
+		background:$primary-color-dark;
+	}
+	&:nth-child(4){
+		background:$accent-color;
+	}
+}
+
+nav{
+	position: fixed;
+	top:0px;
+	width:100%;
+	height:50px;
+	background: #ccc;
+	text-align:center;
+	line-height:24px;
+	box-shadow: 0px 0px 10px #333;
+	padding-top:12px;
+	li{
+		display: inline-block;
+		margin-right: 20px;
+		&:last-child{
+			margin-right: 0px;
+		}
+		a{
+			font-size:1.2em;
+			text-decoration:none;
+			color: $secondary-text-color;
+			padding:4px 10px;
+			transition:all 0.15s ease-in-out;
+			border-bottom: 7px solid #ccc;
+			&.active, &:hover{
+				border-bottom: 7px solid $primary-color-dark;
+				padding: 4px 10px;
+
+			}
+
+		}
+	}
+}
